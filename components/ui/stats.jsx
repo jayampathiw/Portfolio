@@ -15,6 +15,10 @@ const statsList = [
     num: 25,
     text: "Technologies mastered",
   },
+  {
+    num: 5000,
+    text: "Lines of code committed",
+  },
 ];
 
 const Stats = () => {

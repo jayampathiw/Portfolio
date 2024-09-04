@@ -4,6 +4,7 @@ import { FiDownload } from "react-icons/fi";
 import Social from "@/components/ui/social";
 import Photo from "@/components/ui/photo";
 import Stats from "@/components/ui/stats";
+import Typing from "@/components/ui/typing";
 
 const Home = () => {
   return (
@@ -15,11 +16,11 @@ const Home = () => {
             <h1 className="h1 mb-6">
               Hello I'm <br /> <span className="text-accent">Jayampathy</span>
             </h1>
+            <Typing />
             <p className="max-w-[500px] mb-9 text-white/75">
               As a highly skilled and motivated Front-end/Full-stack Developer
               with over 10 years of experience, I specialize in Angular and
-              JavaScript development. My passion lies in creating intuitive and
-              user-friendly interfaces that enhance the overall user experience.
+              JavaScript development.
             </p>
             <div className="flex flex-col xl:flex-row item-center gap-8">
               <Button
