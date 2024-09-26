@@ -1,62 +1,13 @@
 "use client";
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaAngular,
-  FaReact,
-  FaNodeJs,
-} from "react-icons/fa";
-
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tabs } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 
-// ABout section
-const about = {
-  title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi tempora commodi, maiores illo magni pariatur inventore repudiandae.",
-  info: [
-    {
-      fieldName: "Name ",
-      fieldValue: "Jayampathy Wijesena",
-    },
-    {
-      fieldName: "Telephone ",
-      fieldValue: "(+94) 75 94 94 955",
-    },
-    {
-      fieldName: "Experience ",
-      fieldValue: "14 Years",
-    },
-    {
-      fieldName: "Nationality ",
-      fieldValue: "Sri Lankan",
-    },
-    {
-      fieldName: "Email ",
-      fieldValue: "udayanga5@gmail.com",
-    },
-    {
-      fieldName: "Languages ",
-      fieldValue: "English, Sinhalese",
-    },
-  ],
-};
+import { useDataSection } from "./../../contexts/DataContext";
 
 const Resume = () => {
+  const about = useDataSection("contact");
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

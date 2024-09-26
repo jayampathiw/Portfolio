@@ -7,38 +7,10 @@ import { motion } from "framer-motion";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-const servicesList = [
-  {
-    num: "01",
-    title: "Web Development",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur! .",
-    href: "",
-  },
-  {
-    num: "02",
-    title: "UI/UX Design",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur! .",
-    href: "",
-  },
-  {
-    num: "03",
-    title: "Log Design",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur! .",
-    href: "",
-  },
-  {
-    num: "04",
-    title: "Connect",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur! .",
-    href: "",
-  },
-];
+import { useDataSection } from "./../../contexts/DataContext";
 
 const Services = () => {
+  const experiences = useDataSection("experience");
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
@@ -72,7 +44,7 @@ const Services = () => {
           {/*Service list*/}
           <section>
             <ScrollArea className="h-[800px]">
-              {servicesList.map((item, index) => {
+              {experiences.map((item, index) => {
                 return (
                   <div
                     key={index}
