@@ -43,7 +43,7 @@ const Proficiency = () => {
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="technologies">Technologies</TabsTrigger>
-            <TabsTrigger value="professional">Professional</TabsTrigger>
+            {/* <TabsTrigger value="professional">Professional</TabsTrigger> */}
             <TabsTrigger value="academic">Academic</TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
@@ -55,48 +55,56 @@ const Proficiency = () => {
                     {technologies.description}
                   </p>
                 </div>
-                {technologies.categories.map((cat) => {
-                  return (
-                    <>
-                      <p className="text-white/60">{cat.type}</p>
-                      <ul className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-7 gap-4 xl:gap-[20px]">
-                        {cat.skillList.map((item, index) => {
-                          return (
-                            <li key={index}>
-                              <TooltipProvider delayDuration={100}>
-                                <Tooltip>
-                                  <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                                    <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                      <DynamicTechnologyIcon icon={item.icon} />
-                                    </div>
-                                  </TooltipTrigger>
-                                  <TooltipContent>
-                                    <p className="capitalize">{item.name}</p>
-                                  </TooltipContent>
-                                </Tooltip>
-                              </TooltipProvider>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </>
-                  );
-                })}
+                <section>
+                  <ScrollArea className="h-[800px]">
+                    {technologies.categories.map((cat) => {
+                      return (
+                        <>
+                          <p className="text-white/60 pt-4 pb-2">{cat.type}</p>
+                          <ul className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-7 gap-4 xl:gap-[20px] pr-5">
+                            {cat.skillList.map((item, index) => {
+                              return (
+                                <li key={index}>
+                                  <TooltipProvider delayDuration={100}>
+                                    <Tooltip>
+                                      <TooltipTrigger className="w-full h-[60px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                        <div className="text-[2rem] group-hover:text-accent transition-all duration-300">
+                                          <DynamicTechnologyIcon
+                                            icon={item.icon}
+                                          />
+                                        </div>
+                                      </TooltipTrigger>
+                                      <TooltipContent>
+                                        <p className="capitalize">
+                                          {item.name}
+                                        </p>
+                                      </TooltipContent>
+                                    </Tooltip>
+                                  </TooltipProvider>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </>
+                      );
+                    })}
+                  </ScrollArea>
+                </section>
               </div>
             </TabsContent>
-            <TabsContent value="professional" className="w-full ">
+            {/* <TabsContent value="professional" className="w-full ">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{professional.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {professional.description}
                 </p>
                 <ScrollArea className="h-[600px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1 gap-[30px] pr-5">
                     {professional.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:item-start gap-1"
+                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col content-start items-start lg:item-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -112,7 +120,7 @@ const Proficiency = () => {
                   </ul>
                 </ScrollArea>
               </div>
-            </TabsContent>
+            </TabsContent> */}
             <TabsContent value="academic" className="w-full ">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{academic.title}</h3>
@@ -120,15 +128,15 @@ const Proficiency = () => {
                   {academic.description}
                 </p>
                 <ScrollArea className="h-[600px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1 gap-[30px] pr-5">
                     {academic.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:item-start gap-1"
+                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-start lg:item-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-xl min-h-[60px] text-center lg:text-left">
                             {item.course}
                           </h3>
                           <div className="flex items-center gap-3">

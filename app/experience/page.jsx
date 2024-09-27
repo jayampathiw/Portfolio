@@ -26,19 +26,18 @@ const Services = () => {
           <section>
             <h3 className="text-4xl font-bold pb-8">My Experience</h3>
             <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur!
-              .Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur!
-              .Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur!
-              .Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur!
-              . Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur!
-              .Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, quasi. Hic ab dolores minus dignissimos qui pariatur!
-              .Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              With over 14 years of experience in software development, I have
+              led transformative projects in FinTech, EdTech, and Travel
+              industries, driving digital innovation and technical excellence.
+              At CSG International, Cinglevue, and eBuilder Technology Center
+              (EBTC), I spearheaded legacy system modernizations, developed
+              state-of-the-art Angular applications, and implemented advanced
+              blockchain solutions. My expertise spans full-stack
+              development—creating responsive, user-centric front-ends and
+              architecting robust, scalable back-ends. Passionate about
+              performance optimization and innovation, I have consistently
+              delivered high-impact results, mentored teams, and contributed to
+              the success of global enterprises and high-growth startups.
             </p>
           </section>
           {/*Service list*/}
@@ -51,12 +50,14 @@ const Services = () => {
                     className="flex-1 flex flex-col justify-center gap-6 group pr-6 pt-6"
                   >
                     <div className="w-full flex justify-between items-center ">
-                      <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
-                        {item.num}
+                      <div className="text-2xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                        {item.duration}
                       </div>
                       <Link
                         href={item.href}
                         className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
                         <BsArrowDownRight className="text-primary text-3xl" />
                       </Link>

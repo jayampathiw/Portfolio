@@ -12,7 +12,8 @@ const Typing = () => {
             "Web 3 Developer",
             "Front-end Developer",
             "Blockchain Developer",
-            "Full-stack Developer",
+            "Full-stack Engineer",
+            "Software Engineer",
           ]}
           loop={0}
         />

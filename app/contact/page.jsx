@@ -1,5 +1,6 @@
 "use client";
 
+import ContactMe from "@/components/contactMe";
 import { Tabs } from "@/components/ui/tabs";
 
 import { motion } from "framer-motion";
@@ -37,7 +38,7 @@ const about = {
   ],
 };
 
-const Resume = () => {
+const Contact = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -53,9 +54,6 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <div className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            photo
-          </div>
-          <div className="min-h-[70vh] w-full">
             <div value="about" className="w-full text-center xl:text-left ">
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
@@ -78,10 +76,13 @@ const Resume = () => {
               </div>
             </div>
           </div>
+          <div className="min-h-[70vh] w-full">
+            <ContactMe />
+          </div>
         </Tabs>
       </div>
     </motion.div>
   );
 };
 
-export default Resume;
+export default Contact;

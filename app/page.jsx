@@ -14,13 +14,13 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Software Developer</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br /> <span className="text-accent">Jayampathy</span>
+              Hello I'm <span className="text-accent">Jayampathy</span>
             </h1>
             <Typing />
             <p className="max-w-[500px] mb-9 text-white/75">
-              As a highly skilled and motivated Front-end/Full-stack Developer
-              with over 10 years of experience, I specialize in Angular and
-              JavaScript development.
+              Crafting high-performance enterprise solutions for global
+              enterprises Optimizing user experiences and accelerating business
+              growth
             </p>
             <div className="flex flex-col xl:flex-row item-center gap-8">
               <Button
