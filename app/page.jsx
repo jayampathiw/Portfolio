@@ -3,7 +3,6 @@ import { FiDownload } from "react-icons/fi";
 
 import Social from "@/components/ui/social";
 import Photo from "@/components/ui/photo";
-import Stats from "@/components/ui/stats";
 import Typing from "@/components/ui/typing";
 
 const Home = () => {
@@ -45,7 +44,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Stats />
     </section>
   );
 };

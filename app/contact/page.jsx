@@ -1,44 +1,13 @@
 "use client";
 
 import ContactMe from "@/components/contactMe";
-import { Tabs } from "@/components/ui/tabs";
 
 import { motion } from "framer-motion";
 
-// ABout section
-const about = {
-  title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi tempora commodi, maiores illo magni pariatur inventore repudiandae.",
-  info: [
-    {
-      fieldName: "Name ",
-      fieldValue: "Jayampathy Wijesena",
-    },
-    {
-      fieldName: "Telephone ",
-      fieldValue: "(+94) 75 94 94 955",
-    },
-    {
-      fieldName: "Experience ",
-      fieldValue: "14 Years",
-    },
-    {
-      fieldName: "Nationality ",
-      fieldValue: "Sri Lankan",
-    },
-    {
-      fieldName: "Email ",
-      fieldValue: "udayanga5@gmail.com",
-    },
-    {
-      fieldName: "Languages ",
-      fieldValue: "English, Sinhalese",
-    },
-  ],
-};
+import { useDataSection } from "./../../contexts/DataContext";
 
 const Contact = () => {
+  const about = useDataSection("contact");
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -49,7 +18,7 @@ const Contact = () => {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        <Tabs
+        <section
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
@@ -79,7 +48,7 @@ const Contact = () => {
           <div className="min-h-[70vh] w-full">
             <ContactMe />
           </div>
-        </Tabs>
+        </section>
       </div>
     </motion.div>
   );

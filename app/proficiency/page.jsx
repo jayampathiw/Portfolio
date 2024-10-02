@@ -25,7 +25,7 @@ const DynamicTechnologyIcon = dynamic(
 );
 
 const Proficiency = () => {
-  const { professional, academic, technologies } = useDataSection("education");
+  const { academic, technologies } = useDataSection("education");
 
   return (
     <motion.div
@@ -43,7 +43,6 @@ const Proficiency = () => {
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="technologies">Technologies</TabsTrigger>
-            {/* <TabsTrigger value="professional">Professional</TabsTrigger> */}
             <TabsTrigger value="academic">Academic</TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
@@ -56,7 +55,7 @@ const Proficiency = () => {
                   </p>
                 </div>
                 <section>
-                  <ScrollArea className="h-[800px]">
+                  <ScrollArea className="h-[450px]">
                     {technologies.categories.map((cat) => {
                       return (
                         <>
@@ -92,42 +91,13 @@ const Proficiency = () => {
                 </section>
               </div>
             </TabsContent>
-            {/* <TabsContent value="professional" className="w-full ">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{professional.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {professional.description}
-                </p>
-                <ScrollArea className="h-[600px]">
-                  <ul className="grid grid-cols-1 gap-[30px] pr-5">
-                    {professional.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col content-start items-start lg:item-start gap-1"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
-              </div>
-            </TabsContent> */}
             <TabsContent value="academic" className="w-full ">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{academic.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {academic.description}
                 </p>
-                <ScrollArea className="h-[600px]">
+                <ScrollArea className="h-[450px]">
                   <ul className="grid grid-cols-1 gap-[30px] pr-5">
                     {academic.items.map((item, index) => {
                       return (

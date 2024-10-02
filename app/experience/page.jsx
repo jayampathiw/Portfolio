@@ -42,7 +42,7 @@ const Services = () => {
           </section>
           {/*Service list*/}
           <section>
-            <ScrollArea className="h-[800px]">
+            <ScrollArea className="h-[600px]">
               {experiences.map((item, index) => {
                 return (
                   <div

@@ -1,13 +1,9 @@
 "use client";
 
-import { Tabs } from "@/components/ui/tabs";
+import Stats from "@/components/ui/stats";
 import { motion } from "framer-motion";
 
-import { useDataSection } from "./../../contexts/DataContext";
-
 const Resume = () => {
-  const about = useDataSection("contact");
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -18,46 +14,47 @@ const Resume = () => {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        <Tabs
-          defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-[60px]"
-        >
-          <div className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            photo
-          </div>
-          <div className="min-h-[70vh] w-full">
+        <section className="flex flex-col gap-[60px]">
+          <div className="flex flex-col w-full mx-auto xl:mx-0 gap-6">
             <div value="about" className="w-full text-center xl:text-left ">
               <div className="flex flex-col gap-[20px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <section className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <h3 className="text-4xl font-bold">About me</h3>
+                <section className="text-white/60 ">
                   <p className="py-4">
                     Senior Blockchain Developer | Full-Stack Engineer |
-                    Front-End Architect with 14+ years of experience crafting
-                    scalable solutions in Tourism, Travel, FinTech, and EdTech.
-                    Specializing in Blockchain, Web3, Angular, React,
-                    JavaScript, and Java technologies, I've contributed over
-                    500,000 lines of code to enterprise-level projects.
+                    Front-End Architect with 14+ years of experience
+                    transforming complex business challenges into scalable,
+                    user-centric solutions. Specializing in Angular, Java, and
+                    emerging Web3 technologies, I've contributed over 500,000
+                    lines of production-ready code across FinTech and EdTech
+                    domains.
                   </p>
                   <p>
-                    My expertise lies in architecting scalable, component-based
-                    systems that enhance modularity and maintainability. I excel
-                    at implementing smart contracts that optimize transaction
-                    times and security. Through Angular optimization and
-                    intuitive designs, I deliver high-performance interfaces
-                    that boost user engagement across decentralized
-                    applications.
+                    I've successfully delivered enterprise-level projects for
+                    Fortune 500 companies, reducing transaction processing times
+                    by 70% and saving clients millions annually. My passion for
+                    continuous learning keeps me at the forefront of blockchain
+                    innovation, where I leverage cutting-edge technologies to
+                    create secure, decentralized applications that drive
+                    business growth and improve user experiences.
                   </p>
                   <p className="py-4">
-                    Passionate about leveraging blockchain to revolutionize
-                    industries, I bridge the gap between cutting-edge Web3
-                    solutions and user-centric design, creating impactful
-                    applications that shape the future of digital interactions.
+                    Committed to mentoring the next generation of developers, I
+                    foster collaborative environments that boost team
+                    productivity by 40%. Whether it's optimizing travel
+                    management platforms or revolutionizing educational
+                    technology, I thrive on crafting robust, scalable solutions
+                    that make a tangible impact in today's rapidly evolving
+                    digital landscape.
                   </p>
                 </section>
               </div>
             </div>
           </div>
-        </Tabs>
+          <div className="w-full">
+            <Stats />
+          </div>
+        </section>
       </div>
     </motion.div>
   );
