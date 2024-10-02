@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +9,8 @@ const ContactMe = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+  const [isFormValid, setIsFormValid] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -17,22 +19,56 @@ const ContactMe = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const validateForm = () => {
-    let formErrors = {};
-    if (!formData.name.trim()) formErrors.name = "Name is required";
-    if (!formData.email.trim()) formErrors.email = "Email is required";
-    if (!formData.subject.trim()) formErrors.subject = "Subject is required";
-    if (!formData.message.trim()) formErrors.message = "Message is required";
-    return formErrors;
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    setTouched({ ...touched, [name]: true });
+    const fieldErrors = validateField(name, formData[name]);
+    setErrors({ ...errors, ...fieldErrors });
   };
+
+  const validateField = (fieldName, value) => {
+    let fieldErrors = {};
+    switch (fieldName) {
+      case "name":
+        if (!value.trim()) fieldErrors.name = "Name is required";
+        break;
+      case "email":
+        if (!value.trim()) {
+          fieldErrors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(value)) {
+          fieldErrors.email = "Email is invalid";
+        }
+        break;
+      case "subject":
+        if (!value.trim()) fieldErrors.subject = "Subject is required";
+        break;
+      case "message":
+        if (!value.trim()) fieldErrors.message = "Message is required";
+        break;
+      default:
+        break;
+    }
+    return fieldErrors;
+  };
+
+  const validateForm = () => {
+    const fieldErrors = {};
+    Object.keys(formData).forEach((key) => {
+      const fieldError = validateField(key, formData[key]);
+      Object.assign(fieldErrors, fieldError);
+    });
+    setErrors(fieldErrors);
+    return Object.keys(fieldErrors).length === 0;
+  };
+
+  useEffect(() => {
+    setIsFormValid(validateForm());
+  }, [formData]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formErrors = validateForm();
-
-    if (Object.keys(formErrors).length === 0) {
+    if (validateForm()) {
       setIsSubmitting(true);
-      setErrors({});
       try {
         const response = await fetch("/api/sendEmail", {
           method: "POST",
@@ -51,6 +87,7 @@ const ContactMe = () => {
         if (result.success) {
           setSuccessMessage("Your message has been sent successfully!");
           setFormData({ name: "", email: "", subject: "", message: "" });
+          setTouched({});
         } else {
           setSuccessMessage("Failed to send your message. Please try again.");
         }
@@ -60,15 +97,13 @@ const ContactMe = () => {
       } finally {
         setIsSubmitting(false);
       }
-    } else {
-      setErrors(formErrors);
     }
   };
 
   return (
     <div className="max-w-2xl mx-auto p-4 rounded-lg">
       {successMessage && (
-        <p className="text-green-500 text-center mb-4">{successMessage}</p>
+        <p className="text-accent text-center mb-4">{successMessage}</p>
       )}
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
@@ -84,11 +119,13 @@ const ContactMe = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Enter your name"
             className={`mt-1 block w-full px-3 py-2 border ${
-              errors.name ? "border-red-500" : "border-gray-300"
+              touched.name && errors.name ? "border-red-500" : "border-gray-300"
             } bg-transparent rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500`}
           />
-          {errors.name && (
+          {touched.name && errors.name && (
             <p className="text-red-500 text-sm mt-1">{errors.name}</p>
           )}
         </div>
@@ -106,11 +143,15 @@ const ContactMe = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Enter your email"
             className={`mt-1 block w-full px-3 py-2 border ${
-              errors.email ? "border-red-500" : "border-gray-300"
+              touched.email && errors.email
+                ? "border-red-500"
+                : "border-gray-300"
             }  bg-transparent rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500`}
           />
-          {errors.email && (
+          {touched.email && errors.email && (
             <p className="text-red-500 text-sm mt-1">{errors.email}</p>
           )}
         </div>
@@ -128,11 +169,15 @@ const ContactMe = () => {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Enter the subject"
             className={`mt-1 block w-full px-3 py-2 border ${
-              errors.subject ? "border-red-500" : "border-gray-300"
+              touched.subject && errors.subject
+                ? "border-red-500"
+                : "border-gray-300"
             }  bg-transparent rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500`}
           />
-          {errors.subject && (
+          {touched.subject && errors.subject && (
             <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
           )}
         </div>
@@ -150,11 +195,15 @@ const ContactMe = () => {
             rows="4"
             value={formData.message}
             onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Enter your message"
             className={`mt-1 block w-full px-3 py-2 border ${
-              errors.message ? "border-red-500" : "border-gray-300"
+              touched.message && errors.message
+                ? "border-red-500"
+                : "border-gray-300"
             }  bg-transparent rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500`}
           ></textarea>
-          {errors.message && (
+          {touched.message && errors.message && (
             <p className="text-red-500 text-sm mt-1">{errors.message}</p>
           )}
         </div>
@@ -162,10 +211,12 @@ const ContactMe = () => {
         <div className="text-center">
           <button
             type="submit"
-            disabled={isSubmitting}
-            className={`inline-flex justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#232329] hover:bg-[#3e3e42] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
-              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            disabled={!isFormValid || isSubmitting}
+            className={`inline-flex justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md  ${
+              isFormValid && !isSubmitting
+                ? "bg-accent hover:bg-accent/90 text-primary"
+                : "bg-[#232329] opacity-50 cursor-not-allowed text-white"
+            } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent`}
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
