@@ -20,10 +20,10 @@ const links = [
     name: "Proficiency",
     path: "/proficiency",
   },
-  {
-    name: "Work",
-    path: "/work",
-  },
+  // {
+  //   name: "Work",
+  //   path: "/work",
+  // },
   {
     name: "Contact",
     path: "/contact",
