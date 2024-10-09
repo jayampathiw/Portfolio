@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Photo = () => {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <div className="w-full h-full relative">
       <motion.div
@@ -22,7 +23,7 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten"
         >
           <Image
-            src="/assets/profile-photo.png"
+            src={`${prefix}/assets/profile-photo.png`}
             priority
             quality={100}
             fill
