@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Photo = () => {
-  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <div className="w-full h-full relative">
       <motion.div
