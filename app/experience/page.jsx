@@ -53,14 +53,14 @@ const Services = () => {
                       <div className="text-2xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                         {item.duration}
                       </div>
-                      <Link
+                      {item.href.trim().length > 0 && (<Link
                         href={item.href}
                         className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         <BsArrowDownRight className="text-primary text-3xl" />
-                      </Link>
+                      </Link>)}
                     </div>
                     <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
                       {item.title}

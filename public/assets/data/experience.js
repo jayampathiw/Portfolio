@@ -1,6 +1,14 @@
 export const experience = [
   {
     num: "01",
+    duration: "2020/Mar – Present",
+    title: "Senior Full-Stack Web3 Developer",
+    description:
+      "Joined ChainFortress, a pioneering force in Web3 document management solutions, to architect and lead the development of an enterprise-grade secure platform. Tasked with building a scalable blockchain-based system, implementing cutting-edge Web3 technologies, and leading cross-functional teams to deliver secure document management solutions. enhance user experience and application performance.",
+    href: "",
+  },
+  {
+    num: "02",
     duration: "2020/Mar – 2024/Jun",
     title: "Senior Consultant - Angular",
     description:
@@ -8,7 +16,7 @@ export const experience = [
     href: "https://www.csgi.com/",
   },
   {
-    num: "02",
+    num: "03",
     duration: "2019/Jan – 2020/Feb",
     title: "Senior Full-Stack Developer",
     description:
@@ -16,7 +24,7 @@ export const experience = [
     href: "https://cinglevue.com/",
   },
   {
-    num: "03",
+    num: "04",
     duration: "2010/Nov – 2018/Dec",
     title: "Tech Lead",
     description:

@@ -7,33 +7,19 @@ export const education = {
     items: [
       {
         institution: "Algoexpert.",
-        course: "Blockchain Expert",
-        duration: "2024",
+        course: "Blockchain Expert"
       },
       {
         institution: "Algoexpert.",
-        course: "Front-End Expert",
-        duration: "2024",
+        course: "Front-End Expert"
       },
       {
         institution: "Udecity.",
-        course: "Front-End Web Developer",
-        duration: "2018",
+        course: "Front-End Web Developer"
       },
       {
         institution: "Oracle University.",
-        course: "Oracle Certified Associate (OCA) ",
-        duration: "2012",
-      },
-      {
-        institution: "Oracle University.",
-        course: "Sun Certified Java Programmer (SCJP)",
-        duration: "2010",
-      },
-      {
-        institution: "Oracle University.",
-        course: "Sun Certified Mobile Application Programmer (SAMAD)",
-        duration: "2010",
+        course: "Oracle Certified Associate (OCA) "
       },
       {
         institution: "BCS, The Chartered Institute for IT.",
@@ -47,39 +33,6 @@ export const education = {
       },
     ],
   },
-  professional: {
-    icon: "/assets/resume/badge.png",
-    title: "My Experience",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi tempora commodi, maiores illo magni pariatur inventore repudiandae.",
-    items: [
-      {
-        company: "Test inc.",
-        position: "Test Position",
-        duration: "Mar/2020 - Present",
-      },
-      {
-        company: "Test inc.",
-        position: "Test Position",
-        duration: "Mar/2020 - Present",
-      },
-      {
-        company: "Test inc.",
-        position: "Test Position",
-        duration: "Mar/2020 - Present",
-      },
-      {
-        company: "Test inc.",
-        position: "Test Position",
-        duration: "Mar/2020 - Present",
-      },
-      {
-        company: "Test inc.",
-        position: "Test Position",
-        duration: "Mar/2020 - Present",
-      },
-    ],
-  },
   technologies: {
     title: "My Skills",
     description:
@@ -88,27 +41,34 @@ export const education = {
       {
         type: "Programming Languages & Frameworks",
         skillList: [
-          { name: "JavaScript", icon: "SiJavascript" },
+          { name: "JavaScript", icon: "DiJavascript1" },
           { name: "TypeScript", icon: "SiTypescript" },
-          { name: "Java", icon: "FaJava" },
+          { name: "Java", icon: "DiJava" },
+          { name: "Next.js", icon: "SiNextdotjs" },
           { name: "Angular", icon: "FaAngular" },
           { name: "React", icon: "FaReact" },
-          { name: "Node.js", icon: "FaNodeJs" },
+          { name: "Node.js", icon: "DiNodejsSmall" },
           { name: "Spring Boot", icon: "SiSpringboot" },
-          { name: "HTML5", icon: "FaHtml5" },
-          { name: "CSS3", icon: "FaCss3" },
+          { name: "HTML5", icon: "DiHtml5" },
+          { name: "CSS3", icon: "DiCss3" },
+          { name: "GraphQL", icon: "SiGraphql" },
+          { name: "Apollo Client", icon: "SiApollographql" }
         ],
       },
       {
         type: "Blockchain & Web3",
         skillList: [
-          { name: "Smart Contracts", icon: "SiSmartthings" },
+          { name: "Smart Contracts", icon: "SiSolidity" },
           { name: "Solidity", icon: "SiSolidity" },
           { name: "Web3.js", icon: "SiWeb3Dotjs" },
-          { name: "Ethereum", icon: "SiEthereum" },
-          { name: "DApp Development", icon: "SiDatabricks" },
-          { name: "Blockchain Protocols", icon: "SiBlockchaindotcom" },
+          { name: "Ethereum", icon: "FaEthereum" },
+          { name: "Blockchain Protocols", icon: "TbProtocol" },
+          { name: "DApp Development", icon: "FaReact" },
           { name: "Cryptography", icon: "SiGnuprivacyguard" },
+          { name: "OpenZeppelin", icon: "SiOpenzeppelin" },
+          { name: "LayerZero", icon: "AiOutlineCloud" },
+          { name: "IPFS", icon: "SiIpfs" },
+          { name: "Chainlink Oracles", icon: "SiChainlink" }
         ],
       },
       {
@@ -123,21 +83,28 @@ export const education = {
           { name: "SASS", icon: "FaSass" },
           { name: "Bootstrap", icon: "FaBootstrap" },
           { name: "TailwindCSS", icon: "SiTailwindcss" },
+          { name: "Material-UI", icon: "SiMaterialdesign" },
+          { name: "Server-Side Rendering", icon: "FaReact" },
+          { name: "PWA", icon: "FaReact" },
+          { name: "Accessibility (WCAG)", icon: "MdAccessibility" },
+          { name: "Storybook", icon: "SiRedux" }
         ],
       },
       {
         type: "Back-End & Database",
         skillList: [
-          { name: "RESTful APIs", icon: "FaCloudDownloadAlt" },
-          { name: "MongoDB", icon: "SiMongodb" },
+          { name: "RESTful APIs", icon: "AiFillApi" },
+          { name: "Microservices", icon: "FaCogs" },
+          { name: "MongoDB", icon: "DiMongodb" },
           { name: "Oracle", icon: "SiOracle" },
           { name: "MySQL", icon: "SiMysql" },
           { name: "PostgreSQL", icon: "SiPostgresql" },
-          { name: "NoSQL", icon: "SiApachecassandra" },
-          { name: "EJB", icon: "FaJava" },
+          { name: "NoSQL", icon: "DiMongodb" },
+          { name: "EJB", icon: "DiJava" },
           { name: "JMS", icon: "FaEnvelope" },
           { name: "RabbitMQ", icon: "SiRabbitmq" },
-          { name: "JAXRS", icon: "FaJava" },
+          { name: "JAXRS", icon: "DiJava" },
+          { name: "GraphQL API Design", icon: "SiGraphql" }
         ],
       },
       {
@@ -151,8 +118,8 @@ export const education = {
           { name: "Webpack", icon: "SiWebpack" },
           { name: "npm", icon: "FaNpm" },
           { name: "JIRA", icon: "SiJira" },
-          { name: "Bamboo", icon: "SiAtlassian" },
-          { name: "Log4j", icon: "FaFileAlt" },
+          { name: "AWS", icon: "FaAws" },
+          { name: "OpenZeppelin Defender", icon: "SiOpenzeppelin" }
         ],
       },
       {
@@ -160,9 +127,12 @@ export const education = {
         skillList: [
           { name: "Jest", icon: "SiJest" },
           { name: "Jasmine", icon: "SiJasmine" },
+          { name: "Cypress", icon: "SiCypress" },
           { name: "Unit Testing", icon: "FaVial" },
           { name: "Performance Optimization", icon: "FaTachometerAlt" },
           { name: "Test-Driven Development", icon: "FaClipboardCheck" },
+          { name: "Smart Contract Testing", icon: "SiSolidity" },
+          { name: "E2E Testing", icon: "SiCypress" }
         ],
       },
       {
@@ -172,7 +142,10 @@ export const education = {
           { name: "OpenID Connect", icon: "FaIdCard" },
           { name: "JWT", icon: "SiJsonwebtokens" },
           { name: "Keycloak", icon: "SiKeycloak" },
-          { name: "Web Security", icon: "FaShieldAlt" },
+          { name: "Web Security", icon: "MdOutlineSecurity" },
+          { name: "AES-256 Encryption", icon: "FaShieldAlt" },
+          { name: "Blockchain Security", icon: "MdOutlineSecurity" },
+          { name: "Smart Contract Auditing", icon: "SiSolidity" }
         ],
       },
       {
@@ -182,8 +155,10 @@ export const education = {
           { name: "GitHub", icon: "FaGithub" },
           { name: "SVN", icon: "FaCodeBranch" },
           { name: "CVS", icon: "FaCodeBranch" },
+          { name: "Technical Documentation", icon: "FaFileAlt" },
+          { name: "API Documentation", icon: "AiOutlineContainer" }
         ],
-      },
+      }
     ],
   },
 };

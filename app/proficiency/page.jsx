@@ -103,10 +103,10 @@ const Proficiency = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-start lg:item-start gap-1"
+                          className="bg-[#232329] h-[120px] py-6 px-10 rounded-xl flex flex-col items-start lg:item-start gap-1"
                         >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl min-h-[60px] text-center lg:text-left">
+                          
+                          <h3 className="text-xl min-h-[40px] text-center lg:text-left hover:text-accent">
                             {item.course}
                           </h3>
                           <div className="flex items-center gap-3">

@@ -24,9 +24,9 @@ const Resume = () => {
                     Senior Blockchain Developer | Full-Stack Engineer |
                     Front-End Architect with 14+ years of experience
                     transforming complex business challenges into scalable,
-                    user-centric solutions. Specializing in Angular, Java, and
+                    user-centric solutions. Specializing in Next.js, React, Angular, Java, Node.js and
                     emerging Web3 technologies, I've contributed over 500,000
-                    lines of production-ready code across FinTech and EdTech
+                    lines of production-ready code across FinTech, EdTech, Travel and many other
                     domains.
                   </p>
                   <p>
