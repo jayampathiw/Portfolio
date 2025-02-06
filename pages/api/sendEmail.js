@@ -1,19 +1,36 @@
-export default async function handler(req, res) {
-  if (req.method === "POST") {
-    const { name, email, subject, message } = req.body;
+// pages/api/contact.js
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
-    // Here you would typically use a service to send an email
-    // For this example, we'll just log the data and return a success response
-    console.log("Received form submission:", { name, email, subject, message });
+export async function POST(req) {
+  const { name, email, message } = await req.json();
 
-    // Simulate an email sending process
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  // Create a transporter (configure with your email service)
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
 
-    // Return a success response
-    res.status(200).json({ success: true, message: "Email sent successfully" });
-  } else {
-    // Handle any other HTTP method
-    res.setHeader("Allow", ["POST"]);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+  try {
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: "your-email@example.com",
+      subject: `Contact Form Message from ${name}`,
+      text: `
+        Name: ${name}
+        Email: ${email}
+        Message: ${message}
+      `,
+    });
+
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to send email" },
+      { status: 500 }
+    );
   }
 }

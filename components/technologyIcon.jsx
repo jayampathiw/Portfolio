@@ -1,33 +1,83 @@
+"use client";
+
 import React from "react";
-import { 
-  DiJavascript1, DiJava, DiNodejsSmall, DiHtml5, DiCss3, DiMongodb 
-} from 'react-icons/di';
-import { 
-  FaReact, FaAngular, FaAws, FaEthereum, FaDocker, FaGitAlt, FaGithub, FaNpm, FaGitlab, 
-  FaShieldAlt, FaFileAlt, FaCloudDownloadAlt, FaChartLine, FaCogs, FaClipboardCheck, 
-  FaEnvelope, FaLock, FaIdCard, FaTachometerAlt, FaVial, FaMobileAlt, FaSass, FaBootstrap, FaCubes, 
-  FaCodeBranch, FaJenkins
-} from 'react-icons/fa';
-import { 
-  SiTypescript, SiNextdotjs, SiSpringboot, SiGraphql, SiApollographql, SiSolidity, 
-  SiWeb3Dotjs, SiBlockchain, SiOpensea, SiLayer5, SiHardhat, SiFoundry, SiIpfs, 
-  SiChainlink, SiRxjs, SiNgrx, SiRedux, SiSass, SiBootstrap, SiTailwindcss, SiMaterialui, 
-  SiJest, SiJasmine, SiKarma, SiCypress, SiRabbitmq, SiOracle, SiMysql, SiPostgresql, 
-  SiWebpack, SiBamboo, SiKubernetes, SiJira, SiLog4j, SiTenderly, SiOpenzeppelin, 
-  SiJsonwebtokens, SiKeycloak, SiAtlassian, SiGnuprivacyguard, SiHiveBlockchain, SiReactivex, SiMaterialdesign
-} from 'react-icons/si';
-import { 
-  AiFillApi, AiOutlineCloud, AiOutlineContainer 
-} from 'react-icons/ai';
-import { 
-  MdAccessibility, MdOutlineSecurity 
-} from 'react-icons/md';
-import { 
-  RiDatabase2Fill, RiGitRepositoryFill 
-} from 'react-icons/ri';
+import {
+  DiJavascript1,
+  DiJava,
+  DiNodejsSmall,
+  DiHtml5,
+  DiCss3,
+  DiMongodb,
+} from "react-icons/di";
+import {
+  FaReact,
+  FaAngular,
+  FaAws,
+  FaEthereum,
+  FaDocker,
+  FaGitAlt,
+  FaGithub,
+  FaNpm,
+  FaGitlab,
+  FaShieldAlt,
+  FaFileAlt,
+  FaCloudDownloadAlt,
+  FaChartLine,
+  FaCogs,
+  FaClipboardCheck,
+  FaEnvelope,
+  FaLock,
+  FaIdCard,
+  FaTachometerAlt,
+  FaVial,
+  FaMobileAlt,
+  FaSass,
+  FaBootstrap,
+  FaCubes,
+  FaCodeBranch,
+  FaJenkins,
+  FaDatabase,
+  FaServer,
+  FaCode,
+  FaBrain, // Added alternative icons
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiSpringboot,
+  SiGraphql,
+  SiApollographql,
+  SiSolidity,
+  SiWeb3Dotjs,
+  SiOpenzeppelin,
+  SiIpfs,
+  SiChainlink,
+  SiNgrx,
+  SiRedux,
+  SiTailwindcss,
+  SiMaterialdesign,
+  SiJest,
+  SiJasmine,
+  SiCypress,
+  SiRabbitmq,
+  SiOracle,
+  SiMysql,
+  SiPostgresql,
+  SiWebpack,
+  SiKubernetes,
+  SiJira,
+  SiJsonwebtokens,
+  SiKeycloak,
+  SiGnuprivacyguard,
+  SiReactivex,
+} from "react-icons/si";
+import { AiFillApi, AiOutlineCloud, AiOutlineContainer } from "react-icons/ai";
+import { MdAccessibility, MdOutlineSecurity } from "react-icons/md";
 import { TbProtocol } from "react-icons/tb";
 
+// Mapping of icon identifiers to components
 const iconMap = {
+  // Keep existing working mappings
   DiJavascript1,
   SiTypescript,
   DiJava,
@@ -42,25 +92,18 @@ const iconMap = {
   SiSolidity,
   SiWeb3Dotjs,
   FaEthereum,
-  SiBlockchain,
-  SiOpensea,
-  SiLayer5,
-  SiHardhat,
-  SiFoundry,
+  SiOpenzeppelin,
   SiIpfs,
   SiChainlink,
-  SiRxjs,
   SiNgrx,
   SiRedux,
-  SiSass,
   FaSass,
   FaBootstrap,
   SiTailwindcss,
-  SiMaterialui,
   SiMaterialdesign,
   MdAccessibility,
   AiFillApi,
-  RiDatabase2Fill,
+  FaDatabase, // Replacement for some database icons
   SiOracle,
   SiMysql,
   SiPostgresql,
@@ -73,20 +116,15 @@ const iconMap = {
   FaNpm,
   SiJira,
   FaGithub,
-  SiBamboo,
-  SiLog4j,
+  FaServer, // Alternative for missing server icons
   FaAws,
-  SiTenderly,
   TbProtocol,
-  SiOpenzeppelin,
   SiJest,
   SiJasmine,
-  SiKarma,
-  SiNextdotjs,
   SiCypress,
   MdOutlineSecurity,
   FaGitlab,
-  RiGitRepositoryFill,
+  FaCode, // Alternative for missing code icons
   SiJsonwebtokens,
   SiKeycloak,
   FaShieldAlt,
@@ -98,7 +136,6 @@ const iconMap = {
   FaEnvelope,
   FaLock,
   DiMongodb,
-  SiHiveBlockchain,
   SiReactivex,
   FaIdCard,
   FaTachometerAlt,
@@ -109,8 +146,7 @@ const iconMap = {
   SiGnuprivacyguard,
   AiOutlineContainer,
   AiOutlineCloud,
-  SiAtlassian,
-  
+  FaBrain, // Alternative for missing brain icons
 };
 
 const TechnologyIcon = ({ icon, className = "" }) => {
@@ -118,7 +154,8 @@ const TechnologyIcon = ({ icon, className = "" }) => {
 
   if (!IconComponent) {
     console.warn(`Icon not found: ${icon}`);
-    return null;
+    // Return a default icon or null
+    return <FaCode className={className} />;
   }
 
   return <IconComponent className={className} />;

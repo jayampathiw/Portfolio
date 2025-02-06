@@ -7,19 +7,19 @@ export const education = {
     items: [
       {
         institution: "Algoexpert.",
-        course: "Blockchain Expert"
+        course: "Blockchain Expert",
       },
       {
         institution: "Algoexpert.",
-        course: "Front-End Expert"
+        course: "Front-End Expert",
       },
       {
         institution: "Udecity.",
-        course: "Front-End Web Developer"
+        course: "Front-End Web Developer",
       },
       {
         institution: "Oracle University.",
-        course: "Oracle Certified Associate (OCA) "
+        course: "Oracle Certified Associate (OCA) ",
       },
       {
         institution: "BCS, The Chartered Institute for IT.",
@@ -52,7 +52,7 @@ export const education = {
           { name: "HTML5", icon: "DiHtml5" },
           { name: "CSS3", icon: "DiCss3" },
           { name: "GraphQL", icon: "SiGraphql" },
-          { name: "Apollo Client", icon: "SiApollographql" }
+          { name: "Apollo Client", icon: "SiApollographql" },
         ],
       },
       {
@@ -63,12 +63,12 @@ export const education = {
           { name: "Web3.js", icon: "SiWeb3Dotjs" },
           { name: "Ethereum", icon: "FaEthereum" },
           { name: "Blockchain Protocols", icon: "TbProtocol" },
-          { name: "DApp Development", icon: "FaReact" },
+          { name: "DApp Development", icon: "FaCode" },
           { name: "Cryptography", icon: "SiGnuprivacyguard" },
           { name: "OpenZeppelin", icon: "SiOpenzeppelin" },
-          { name: "LayerZero", icon: "AiOutlineCloud" },
+          { name: "Layer Zero", icon: "FaServer" },
           { name: "IPFS", icon: "SiIpfs" },
-          { name: "Chainlink Oracles", icon: "SiChainlink" }
+          { name: "Chainlink Oracles", icon: "SiChainlink" },
         ],
       },
       {
@@ -87,7 +87,7 @@ export const education = {
           { name: "Server-Side Rendering", icon: "FaReact" },
           { name: "PWA", icon: "FaReact" },
           { name: "Accessibility (WCAG)", icon: "MdAccessibility" },
-          { name: "Storybook", icon: "SiRedux" }
+          { name: "Storybook", icon: "SiRedux" },
         ],
       },
       {
@@ -104,7 +104,7 @@ export const education = {
           { name: "JMS", icon: "FaEnvelope" },
           { name: "RabbitMQ", icon: "SiRabbitmq" },
           { name: "JAXRS", icon: "DiJava" },
-          { name: "GraphQL API Design", icon: "SiGraphql" }
+          { name: "GraphQL API Design", icon: "SiGraphql" },
         ],
       },
       {
@@ -119,7 +119,7 @@ export const education = {
           { name: "npm", icon: "FaNpm" },
           { name: "JIRA", icon: "SiJira" },
           { name: "AWS", icon: "FaAws" },
-          { name: "OpenZeppelin Defender", icon: "SiOpenzeppelin" }
+          { name: "OpenZeppelin Defender", icon: "SiOpenzeppelin" },
         ],
       },
       {
@@ -132,7 +132,7 @@ export const education = {
           { name: "Performance Optimization", icon: "FaTachometerAlt" },
           { name: "Test-Driven Development", icon: "FaClipboardCheck" },
           { name: "Smart Contract Testing", icon: "SiSolidity" },
-          { name: "E2E Testing", icon: "SiCypress" }
+          { name: "E2E Testing", icon: "SiCypress" },
         ],
       },
       {
@@ -145,7 +145,7 @@ export const education = {
           { name: "Web Security", icon: "MdOutlineSecurity" },
           { name: "AES-256 Encryption", icon: "FaShieldAlt" },
           { name: "Blockchain Security", icon: "MdOutlineSecurity" },
-          { name: "Smart Contract Auditing", icon: "SiSolidity" }
+          { name: "Smart Contract Auditing", icon: "SiSolidity" },
         ],
       },
       {
@@ -156,9 +156,9 @@ export const education = {
           { name: "SVN", icon: "FaCodeBranch" },
           { name: "CVS", icon: "FaCodeBranch" },
           { name: "Technical Documentation", icon: "FaFileAlt" },
-          { name: "API Documentation", icon: "AiOutlineContainer" }
+          { name: "API Documentation", icon: "AiOutlineContainer" },
         ],
-      }
+      },
     ],
   },
 };
