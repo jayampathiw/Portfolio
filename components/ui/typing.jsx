@@ -9,11 +9,11 @@ const Typing = () => {
       <span className="text-accent px-10">
         <Typewriter
           words={[
-            "Web 3 Developer",
-            "Front-end Developer",
-            "Blockchain Developer",
-            "Full-stack Engineer",
-            "Software Engineer",
+            "Senior Angular Developer",
+            "Angular Architect",
+            "Full Stack Engineer",
+            "Technical Lead",
+            "Enterprise Solutions Expert",
           ]}
           loop={0}
         />

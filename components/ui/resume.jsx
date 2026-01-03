@@ -6,8 +6,8 @@ import { FiDownload } from "react-icons/fi";
 const Resume = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/assets/resume/Jayampathy_Wijesena_Resume.pdf";
-    link.download = "Jayampathy_Wijesena_Resume.pdf";
+    link.href = "/assets/resume/Jayampathy_Bandara_Resume.pdf";
+    link.download = "Jayampathy_Bandara_Resume.pdf";
     link.click();
   };
   return (

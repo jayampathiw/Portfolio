@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import PageTransition from "@/components/pageTransition";
 import StairTransition from "@/components/stairTransition";
+import FloatingSidebar from "@/components/ui/floatingSidebar";
 import { DataProvider } from "../contexts/DataContext";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
           <Header />
           <StairTransition />
           <PageTransition>{children}</PageTransition>
+          <FloatingSidebar />
         </DataProvider>
       </body>
     </html>

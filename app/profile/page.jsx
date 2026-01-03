@@ -9,27 +9,27 @@ const Resume = () => {
   const expertise = [
     {
       icon: <Code2 className="w-6 h-6" />,
-      title: "Full Stack Development",
-      skills: ["Next.js", "React", "Angular", "Node.js", "Java"],
+      title: "Angular & Frontend",
+      skills: ["Angular 18", "Signals", "NgRx", "RxJS", "TypeScript"],
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Blockchain Innovation",
-      skills: ["Web3", "Smart Contracts", "DeFi", "Gas Optimization"],
+      title: "Enterprise Architecture",
+      skills: ["Micro-frontends", "Module Federation", "Design Systems", "Storybook"],
     },
     {
       icon: <Rocket className="w-6 h-6" />,
-      title: "Performance Optimization",
+      title: "Performance & Scale",
       skills: [
-        "70% Process Reduction",
-        "Millions Saved",
-        "40% Team Productivity",
+        "95 Lighthouse Score",
+        "10K+ Concurrent Users",
+        "75% Load Time Reduction",
       ],
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Technical Leadership",
-      skills: ["Team Mentoring", "Architecture Design", "Best Practices"],
+      skills: ["Team Mentoring", "Code Reviews", "Architecture Design"],
     },
   ];
 
@@ -89,31 +89,29 @@ const Resume = () => {
 
                 <section className="text-white/60 ">
                   <p className="py-4">
-                    Senior Blockchain Developer | Full-Stack Engineer |
-                    Front-End Architect with 8+ years of experience transforming
-                    complex business challenges into scalable, user-centric
-                    solutions. Specializing in Next.js, React, Angular, Java,
-                    Node.js and emerging Web3 technologies, I've contributed
-                    over 500,000 lines of production-ready code across FinTech,
-                    EdTech, Travel and many other domains.
+                    Senior Angular Architect | Full-Stack Engineer with 14+ years
+                    of experience building high-performance enterprise applications.
+                    Specializing in Angular 18 with Signals and Standalone Components,
+                    I architect scalable platforms serving millions of users across
+                    Fortune 500 clients including CSG International and leading
+                    EdTech companies.
                   </p>
                   <p>
-                    I've successfully delivered enterprise-level projects for
-                    Fortune 500 companies, reducing transaction processing times
-                    by 70% and saving clients millions annually. My passion for
-                    continuous learning keeps me at the forefront of blockchain
-                    innovation, where I leverage cutting-edge technologies to
-                    create secure, decentralized applications that drive
-                    business growth and improve user experiences.
+                    I've successfully delivered enterprise platforms handling
+                    10,000+ concurrent users with 99.9% uptime. My expertise
+                    in micro-frontend architecture, NgRx state management, and
+                    performance optimization has achieved 95 Lighthouse scores
+                    and 75% load time reductions. I've built 50+ reusable
+                    component libraries with Storybook documentation and
+                    maintained 85%+ test coverage across large-scale applications.
                   </p>
                   <p className="py-4">
-                    Committed to mentoring the next generation of developers, I
-                    foster collaborative environments that boost team
-                    productivity by 40%. Whether it's optimizing travel
-                    management platforms or revolutionizing educational
-                    technology, I thrive on crafting robust, scalable solutions
-                    that make a tangible impact in today's rapidly evolving
-                    digital landscape.
+                    Committed to technical excellence and mentoring development
+                    teams, I foster best practices in code quality, testing, and
+                    architecture design. From real-time collaborative EdTech
+                    platforms to telecommunications billing systems serving 1M+
+                    users, I thrive on crafting robust, scalable Angular solutions
+                    that deliver measurable business impact.
                   </p>
                 </section>
               </div>

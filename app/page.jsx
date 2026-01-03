@@ -1,36 +1,24 @@
 "use client";
 import Stats from "@/components/ui/stats";
-import Social from "@/components/ui/social";
 import Photo from "@/components/ui/photo";
 import Typing from "@/components/ui/typing";
-import Resume from "@/components/ui/resume";
 
 const Home = () => {
   return (
     <section className="h-full">
       <div className="container max-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-0 xl:pb-12">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <h1 className="h1 mb-6">
+            <h1 className="h1 mb-4">
               Hello I'm <span className="text-accent">Jayampathy</span>
             </h1>
             <Typing />
-            <p className="max-w-[500px] mb-9 text-white/75">
-              Crafting high-performance enterprise solutions with expertise in
-              Web3 and blockchain technologies. Specializing in building secure,
-              scalable applications that bridge traditional and decentralized
-              systems.
+            <p className="max-w-[500px] mt-4 text-white/75">
+              Architecting high-performance enterprise applications with Angular 18
+              and modern web technologies. Specialized in building scalable platforms
+              serving 10,000+ concurrent users with 99.9% uptime. Expert in Signals,
+              NgRx, and micro-frontend architectures for Fortune 500 clients.
             </p>
-            <div className="flex flex-col xl:flex-row item-center gap-8">
-              <Resume />
-              <div className="mb-8 xl:mb-0 flex justify-center items-center">
-                <Social
-                  containerStyles="flex gap-6"
-                  IconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center 
-                  text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
-                />
-              </div>
-            </div>
           </div>
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />

@@ -8,16 +8,19 @@ const statsList = [
     text: "Years of experience",
   },
   {
-    num: 20,
-    text: "Projects completed",
+    num: 1,
+    suffix: "M+",
+    text: "Enterprise users served",
   },
   {
-    num: 25,
-    text: "Technologies mastered",
+    num: 50,
+    suffix: "+",
+    text: "Reusable components built",
   },
   {
-    num: 50000,
-    text: "Lines of code committed",
+    num: 75,
+    suffix: "%",
+    text: "Performance improvement",
   },
 ];
 
@@ -36,6 +39,7 @@ const Stats = () => {
                   end={item.num}
                   duration={5}
                   delay={2}
+                  suffix={item.suffix || ""}
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
                 <p

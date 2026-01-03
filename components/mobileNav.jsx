@@ -4,6 +4,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
+import Social from "./ui/social";
+import Resume from "./ui/resume";
 
 const links = [
   {
@@ -40,7 +42,7 @@ const MobileNav = () => {
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mt-32 mb-20 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
               Jayampathy<span className="text-accent">.</span>
@@ -63,6 +65,14 @@ const MobileNav = () => {
             );
           })}
         </nav>
+        <div className="mt-12 flex flex-col items-center gap-8">
+          <Social
+            containerStyles="flex gap-6"
+            IconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center
+            text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+          />
+          <Resume />
+        </div>
       </SheetContent>
     </Sheet>
   );
