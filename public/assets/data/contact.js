@@ -1,18 +1,18 @@
 export const contact = {
-  title: "Contact me",
-  description: "",
-  info: [
+  "title": "Contact me",
+  "description": "",
+  "info": [
     {
-      fieldName: "Name ",
-      fieldValue: "Jayampathy Wijesena",
+      "fieldName": "Name ",
+      "fieldValue": "Jayampathy Wijesena"
     },
     {
-      fieldName: "Telephone ",
-      fieldValue: "(+94) 75 94 94 955",
+      "fieldName": "Telephone ",
+      "fieldValue": "(+94) 75 949 4955"
     },
     {
-      fieldName: "Email ",
-      fieldValue: "udayanga5@gmail.com",
-    },
-  ],
+      "fieldName": "Email ",
+      "fieldValue": "udayanga5@gmail.com"
+    }
+  ]
 };

@@ -1,130 +1,117 @@
-// experienceData.js
 export const experience = [
   {
-    num: "01",
-    duration: "2025/Jan – Present",
-    period: "Jan 2025 - Present",
-    title: "Principal Angular Developer",
-    company: "CompileForge",
-    type: "Contract",
-    description:
-      "Leading frontend development for enterprise EdTech SaaS platform serving 300+ educational institutions with real-time collaborative grading capabilities.",
-    href: "https://compileforge.com",
-    achievements: [
-      "Architected Angular 18.2 platform with Signals and 100% Standalone Components",
-      "Built real-time collaboration system supporting 10,000+ concurrent users",
-      "Achieved 95 Lighthouse score with <2s load time through lazy loading optimization",
-      "Implemented NgRx + Signals hybrid reducing component re-renders by 92%",
+    "num": "01",
+    "duration": "2024/Jun – Present",
+    "period": "Jun 2024 - Present",
+    "title": "Principal Angular Developer",
+    "company": "CompileForge",
+    "type": "Remote",
+    "description": "Led architectural transformation of enterprise EdTech platform from Next.js to Angular 18,\nserving 300+ institutions globally with 10,000+ concurrent users. Implemented real-time\ncollaborative grading system with WebSocket integration.\n",
+    "href": "https://compileforge.com",
+    "achievements": [
+      "75% load time reduction with Angular 18 Signals",
+      "Real-time system for 10K+ users",
+      "95 Lighthouse score achieved",
+      "85% test coverage with Nx monorepo",
+      "i18n for 5 languages including RTL"
     ],
-    technologies: [
+    "technologies": [
       "Angular 18",
-      "Signals",
-      "NgRx",
-      "TypeScript",
-      "Socket.io",
+      "TypeScript 5.4",
+      "NgRx Signals",
+      "Socket.io"
     ],
-    metrics: [
-      "10K+ concurrent users",
-      "95 Lighthouse score",
-      "85% test coverage",
-    ],
+    "metrics": []
   },
   {
-    num: "02",
-    duration: "2023/Jun – 2024/Dec",
-    period: "Jun 2023 - Dec 2024",
-    title: "Senior Full-Stack Web3 Developer",
-    company: "ChainFortress",
-    type: "Remote",
-    description:
-      "Architected and led development of an enterprise-grade secure document management platform on blockchain, demonstrating ability to master complex emerging technologies.",
-    href: "",
-    achievements: [
-      "Architected secure blockchain solutions processing 100K+ monthly transactions",
-      "Reduced gas costs by 45% while maintaining zero security vulnerabilities",
-      "Built high-performance Next.js 13 frontend with GraphQL/Apollo integration",
-      "Led implementation of cross-chain functionality using LayerZero and Axelar",
+    "num": "02",
+    "duration": "2023/Jun – 2024/Dec",
+    "period": "Jun 2023 - Dec 2024",
+    "title": "Senior Full-Stack Web3 Developer",
+    "company": "ChainFortress",
+    "type": "Remote",
+    "description": "Architected enterprise-grade secure document management platform on blockchain, demonstrating\nability to master complex emerging technologies. Built high-performance Next.js 13 frontend\nwith GraphQL/Apollo integration.\n",
+    "href": "",
+    "achievements": [
+      "100K+ monthly blockchain transactions",
+      "45% gas cost reduction",
+      "High-performance Next.js frontend",
+      "Cross-chain functionality implemented"
     ],
-    technologies: [
+    "technologies": [
       "Next.js 13",
       "React 18",
       "Solidity",
-      "GraphQL",
-      "Web3.js",
+      "GraphQL"
     ],
-    metrics: [
-      "45% gas optimization",
-      "100K+ monthly transactions",
-      "90% test coverage",
-    ],
+    "metrics": []
   },
   {
-    num: "03",
-    duration: "2020/Mar – 2023/Jun",
-    period: "Mar 2020 - Jun 2023",
-    title: "Senior Consultant - Angular",
-    company: "CSG International",
-    type: "Remote",
-    description:
-      "Led Angular development for Fortune 500 telecommunications and media solutions provider, architecting enterprise-level applications serving 1M+ end users.",
-    href: "https://www.csgi.com/",
-    achievements: [
-      "Developed enterprise telecommunications platform with Angular 14-16 and micro-frontends",
-      "Created 50+ reusable component library reducing development time by 30-35%",
-      "Implemented NgRx + NgRx-Entity state management handling complex data flows",
-      "Optimized CI/CD pipelines reducing deployment time by 75% (45min → 10min)",
+    "num": "03",
+    "duration": "2020/Mar – 2023/Jun",
+    "period": "Mar 2020 - Jun 2023",
+    "title": "Senior Consultant - Angular",
+    "company": "CSG International",
+    "type": "Remote",
+    "description": "Led Angular development for Fortune 500 telecommunications and media solutions provider,\narchitecting enterprise-level applications serving 1M+ end users with 50+ reusable components.\n",
+    "href": "https://www.csgi.com/",
+    "achievements": [
+      "50+ component library with Storybook",
+      "NgRx state management, 40% performance gain",
+      "Test coverage 65% to 95%",
+      "CI/CD optimization, 75% faster deployments",
+      "Led 8-developer cross-functional team"
     ],
-    technologies: ["Angular", "TypeScript", "NgRx", "RxJS", "Storybook"],
-    metrics: [
-      "1M+ end users",
-      "75% faster deployments",
-      "65% → 95% test coverage",
+    "technologies": [
+      "Angular 12-16",
+      "TypeScript",
+      "NgRx",
+      "RxJS"
     ],
+    "metrics": []
   },
   {
-    num: "04",
-    duration: "2019/Jan – 2020/Feb",
-    period: "Jan 2019 - Feb 2020",
-    title: "Tech Lead - Angular",
-    company: "Cinglevue International",
-    type: "Full-time",
-    description:
-      "Spearheaded modernization of legacy EdTech platform, leading AngularJS to Angular migration for 100,000+ lines of code serving 500,000+ users.",
-    href: "https://cinglevue.com/",
-    achievements: [
-      "Led AngularJS → Angular migration for 100,000+ LOC legacy codebase",
-      "Engineered 20+ micro-frontends using Angular Elements for cross-framework integration",
-      "Architected modular system with lazy loading reducing initial bundle by 60%",
-      "Established GDPR-compliant security protocols with Keycloak integration",
+    "num": "04",
+    "duration": "2019/Jan – 2020/Mar",
+    "period": "Jan 2019 - Mar 2020",
+    "title": "Tech Lead - Angular",
+    "company": "Cinglevue International",
+    "type": "Onsite",
+    "description": "Spearheaded modernization of legacy EdTech platform, leading AngularJS to Angular migration\nfor 100,000+ lines of code serving 500,000+ users.\n",
+    "href": "https://cinglevue.com/",
+    "achievements": [
+      "100K+ LOC migrated to Angular",
+      "20+ micro-frontends built",
+      "50+ reusable UI components",
+      "GDPR-compliant security with Keycloak"
     ],
-    technologies: ["Angular", "Angular Elements", "Spring Boot", "Microservices", "Docker"],
-    metrics: [
-      "500K+ platform users",
-      "35% efficiency improvement",
-      "20+ micro-frontends",
+    "technologies": [
+      "Angular 8-9",
+      "Angular Elements",
+      "TypeScript"
     ],
+    "metrics": []
   },
   {
-    num: "05",
-    duration: "2014/Oct – 2018/Dec",
-    period: "Oct 2014 - Dec 2018",
-    title: "Tech Lead",
-    company: "eBuilder Technology Center",
-    type: "Full-time",
-    description:
-      "Led development of enterprise cloud-based travel and expense management solutions for Nordea Bank, processing 1M+ daily financial transactions.",
-    href: "https://ebuilder.com/",
-    achievements: [
-      "Architected financial solutions processing 1M+ daily transactions for Nordea Bank",
-      "Led development of cloud-based travel management platform saving clients $10M+ annually",
-      "Implemented real-time data synchronization across multiple financial systems",
-      "Mentored team of 8 developers while maintaining 99.9% system uptime",
+    "num": "05",
+    "duration": "2014/Oct – 2018/Dec",
+    "period": "Oct 2014 - Dec 2018",
+    "title": "Technical Lead",
+    "company": "eBuilder Technology Centre",
+    "type": "Onsite",
+    "description": "Led development of enterprise cloud-based travel and expense management solutions for\nNordea Bank, processing 1M+ daily transactions.\n",
+    "href": "https://ebuilder.com/",
+    "achievements": [
+      "1M+ daily transactions processed",
+      "Associate to Technical Lead progression",
+      "80% test coverage with CI/CD"
     ],
-    technologies: ["Java", "Spring", "Angular", "Oracle", "REST APIs"],
-    metrics: [
-      "1M+ daily transactions",
-      "$10M+ client savings",
-      "99.9% uptime",
+    "technologies": [
+      "Angular 2-6",
+      "TypeScript",
+      "Java",
+      "Spring"
     ],
-  },
+    "metrics": []
+  }
 ];
